@@ -13,3 +13,10 @@
 .cell.special:after{background:linear-gradient(135deg,#fff2bb,#d4af61);color:#5c4927;border:1px solid #f6e4ae;box-shadow:0 2px 4px #001a1650;font-size:12px;bottom:1px;right:1px}
 .progress{margin-top:23px}.progress span{background:linear-gradient(90deg,#78956b,#c4ae74)}
 @media(max-width:680px){.board{padding:9px;gap:5px;border-radius:14px}.cell{border-radius:8px;padding:1px}}
+.music-toggle{font-size:11px;letter-spacing:.5px;border:1px solid #d9c99f;background:linear-gradient(#fffdf5,#f0ead8);border-radius:20px;padding:9px 11px;white-space:nowrap;color:#6c6344}
+.cell.pop{animation:match-halo .9s ease-in-out forwards;z-index:2}
+.cell.pop svg{animation:match-dissolve .9s ease-in-out forwards}
+.cell.fall svg{animation-duration:.4s}
+@keyframes match-halo{0%,42%{border-color:#ffe8a5;background:#b7a56b55;box-shadow:inset 0 0 12px #edcc7266,0 0 9px #efd18a70}100%{border-color:#afc09b20;background:#8da98c12;box-shadow:none}}
+@keyframes match-dissolve{0%{opacity:1;transform:scale(1);filter:drop-shadow(0 0 3px #ffe9af)}35%{opacity:1;transform:scale(1.08);filter:drop-shadow(0 0 7px #ffe9af)}55%{opacity:1;transform:scale(1.04)}100%{opacity:0;transform:scale(.7)}}
+@media(prefers-reduced-motion:reduce){.cell.pop{animation:match-halo .9s linear forwards}.cell.pop svg{animation:none;opacity:.65}.cell.fall svg{animation:none}}
