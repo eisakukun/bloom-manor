@@ -5,3 +5,11 @@
 /* Keep the board and its slots stationary while replacement pieces fall. */
 .board{aspect-ratio:1;grid-template-rows:repeat(7,minmax(0,1fr));overflow:hidden}.cell{min-height:0}.board-wrap{overflow-anchor:none}
 @media(prefers-reduced-motion:reduce){.cell.fall svg,.cell.pop,.cell.hinted,.combo.show{animation:none}.cell{transition:none}}
+/* Jewel-box board: fixed brass-edged tray with hand-polished enamel pieces. */
+.board{background:linear-gradient(145deg,#224c43,#102e2a 75%);border:1px solid #bda06b;padding:11px;gap:6px;border-radius:17px;box-shadow:0 0 0 4px #e9ddbe,0 0 0 5px #b49a6a,0 12px 26px #1c3c3526,inset 0 2px 5px #061b1a80;isolation:isolate}
+.cell,.cell:nth-child(even){background:linear-gradient(145deg,#50726842,#8da98c12 60%,#061e1b38);border:1px solid #afc09b20;border-radius:11px;box-shadow:inset 0 1px 0 #eef9d41c,inset 0 -2px 5px #0017112e;padding:3px;aspect-ratio:auto}
+.cell svg{width:98%;height:98%;filter:drop-shadow(0 3px 2px #001a1680)}
+.cell.selected{background:linear-gradient(145deg,#cfbc7966,#a78b4240);border-color:#ead094;box-shadow:inset 0 0 12px #d1ad5430,0 0 0 1px #e6cc85;transform:none}
+.cell.special:after{background:linear-gradient(135deg,#fff2bb,#d4af61);color:#5c4927;border:1px solid #f6e4ae;box-shadow:0 2px 4px #001a1650;font-size:12px;bottom:1px;right:1px}
+.progress{margin-top:23px}.progress span{background:linear-gradient(90deg,#78956b,#c4ae74)}
+@media(max-width:680px){.board{padding:9px;gap:5px;border-radius:14px}.cell{border-radius:8px;padding:1px}}
